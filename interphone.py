@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO  # Gestion des GPIO
 import subprocess
 from time import sleep  # Gestion du temps
+from IPyhon.display import clear_output
 
 GPIO.setmode(GPIO.BCM)  # La numerotation choisie
 GPIO.setup(16, GPIO.IN)  # Une entree : le poussoir
@@ -19,3 +20,4 @@ print("Maintenant, le programme surveille les actions sur le poussoir\n")
 
 while True:
     sleep(30)
+    clear_output
